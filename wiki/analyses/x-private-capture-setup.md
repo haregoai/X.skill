@@ -11,7 +11,7 @@ tags:
   - private-runtime
 ---
 
-This page explains how `X.skill` is intended to connect to a real personal X `For You` feed without publishing private browser state.
+This page explains how `X.skill` is intended to connect to a real personal X home feed without publishing private browser state.
 
 ## Design Rule
 
@@ -62,7 +62,7 @@ This command is only an example. The important part is the pattern: private prof
 
 The intended private X loop is:
 
-1. open the dedicated browser on the X home / `For You` timeline
+1. open the dedicated browser on the X home timeline
 2. keep that session logged in
 3. use a private extractor to read visible posts from the page
 4. export the visible posts to a local JSON file

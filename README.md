@@ -2,7 +2,7 @@
 
 `X.skill` is an X-first self-learning and self-distillation system built on top of the core ideas in `karpathy/llm-wiki.md`.
 
-It is centered on capturing signals from your personal X `For You` feed, filtering and distilling high-value content, and promoting the useful parts into durable memory.
+It is centered on capturing signals from your personal X home feed, filtering and distilling high-value content, and promoting the useful parts into durable memory.
 
 In one line: it extends Karpathy's wiki-maintenance pattern into a personal X-based self-learning loop for memory formation.
 
@@ -18,7 +18,7 @@ Most note systems stop at saving information. Most feed readers stop at helping 
 
 `X.skill` is built around a different loop:
 
-1. capture signals from your real X `For You` flow
+1. capture signals from your real X home feed
 2. compress strong posts into intelligence pages and learning notes
 3. extract durable rules from repeated high-signal inputs
 4. promote those rules into memory
@@ -82,7 +82,7 @@ The public repo does not ship real X sessions, browser profiles, or live capture
 
 `X.skill` is for people who do ongoing knowledge work and want more than a note archive:
 
-- builders who learn heavily from their own X `For You` timeline
+- builders who learn heavily from their own X home timeline
 - people who want a system that absorbs strong posts into memory instead of just bookmarking them
 - people who want memory to affect later decisions, not just store old text
 - users who prefer local files, markdown, and inspectable workflows over opaque hosted systems
@@ -93,7 +93,7 @@ The public repo does not ship real X sessions, browser profiles, or live capture
 
 The core product idea is:
 
-- observe your own X `For You` feed
+- observe your own X home feed
 - identify the posts that are actually worth keeping
 - compress them into reflections, rules, and learning memory
 - move the durable parts into your second brain
@@ -106,7 +106,7 @@ In one line: Karpathy's `LLM Wiki` compiles static sources into a maintained wik
 
 In a real private setup, the X loop looks like this:
 
-1. read your own X `For You` feed
+1. read your own X home feed
 2. identify the posts worth keeping
 3. write intelligence, reflection, and learning-memory pages
 4. promote durable judgments into memory
@@ -116,7 +116,7 @@ The goal is not to save more tweets. The goal is to absorb the right tweets into
 
 ## X Dashboard
 
-[`x-dashboard.html`](/Users/dengz/llm-wiki/web/x-dashboard.html) is the live learning dashboard for the personal X `For You` feed.
+[`x-dashboard.html`](/Users/dengz/llm-wiki/web/x-dashboard.html) is the live learning dashboard for the personal X home feed.
 
 It sits between raw X input and durable memory, and shows:
 
@@ -137,7 +137,7 @@ The public repository does not ship your real X session or private browser autom
 2. point `memory_root` and `browser_profile_root` to private local directories outside Git
 3. launch a dedicated automation browser with a separate profile
 4. log into your own X account in that dedicated browser
-5. keep the browser focused on the `For You` / home timeline
+5. keep the browser focused on the X home timeline
 6. use your private capture layer to export visible posts into a local JSON file
 7. feed that JSON into the same learning and memory workflow used by the public demo
 
@@ -147,7 +147,7 @@ For a fuller private-setup walkthrough, see [`wiki/analyses/x-private-capture-se
 
 ## Public Demo
 
-The public demo uses mock social-feed input because it is safe to publish. In a real private setup, the same learning loop is intended to run primarily on your own X `For You` capture stream.
+The public demo uses mock social-feed input because it is safe to publish. In a real private setup, the same learning loop is intended to run primarily on your own X home capture stream.
 
 ## Documentation Map
 
