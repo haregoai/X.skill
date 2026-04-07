@@ -17,6 +17,12 @@
     "x_enabled": false,
     "reddit_enabled": true
   },
+  "x": {
+    "feed_url": "https://x.com/home",
+    "export_input": "raw/inbox/x-for-you-visible-posts.json",
+    "automation_browser_url": "http://127.0.0.1:9223",
+    "automation_browser_port": 9223
+  },
   "reddit": {
     "subreddit": "MachineLearning",
     "listing": "hot",

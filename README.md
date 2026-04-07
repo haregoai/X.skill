@@ -201,6 +201,22 @@ In a real private setup, the X loop looks like this:
 
 The goal is not to save more tweets. The goal is to absorb the right tweets into your brain.
 
+## How To Use X Capture
+
+The public repository does not ship your real X session or private browser automation. Instead, the intended setup is:
+
+1. create `config/settings.local.json`
+2. point `memory_root` and `browser_profile_root` to private local directories outside Git
+3. launch a dedicated automation browser with a separate profile
+4. log into your own X account in that dedicated browser
+5. keep the browser focused on the `For You` / home timeline
+6. use your private capture layer to export visible posts into a local JSON file
+7. feed that JSON into the same learning and memory workflow used by the public demo
+
+The dedicated browser exists for one reason: keep your personal X login and automation state separate from the public repository and from your everyday browsing session.
+
+For a fuller private-setup walkthrough, see [`wiki/analyses/x-private-capture-setup.md`](wiki/analyses/x-private-capture-setup.md).
+
 ## Other Inputs
 
 `X.skill` can also learn from other inputs such as Reddit, reading queues, or local notes, but those are secondary to the X-centered learning loop.
@@ -221,6 +237,7 @@ The current public demo uses [`raw/inbox/reddit-ml-visible-posts.example.json`](
 
 - [`AGENTS.md`](AGENTS.md): operating rules for agent maintenance
 - [`wiki/overview.md`](wiki/overview.md): wiki structure
+- [`wiki/analyses/x-private-capture-setup.md`](wiki/analyses/x-private-capture-setup.md): how to run X capture with a private browser layer
 - [`wiki/analyses/memory-schema.md`](wiki/analyses/memory-schema.md): memory layer design
 - [`wiki/analyses/open-source-boundaries.md`](wiki/analyses/open-source-boundaries.md): what stays public vs private
 - [`wiki/analyses/publish-checklist.md`](wiki/analyses/publish-checklist.md): pre-release safety checklist

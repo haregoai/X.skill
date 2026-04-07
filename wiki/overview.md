@@ -15,6 +15,10 @@ This wiki is the durable knowledge layer for the public scaffold.
 - `wiki/analyses/reddit-ml-intelligence.md`
 - `wiki/analyses/reddit-ml-learning-memory.md`
 
+## Capture Docs
+
+- `wiki/analyses/x-private-capture-setup.md`
+
 ## Rule
 
 The public wiki should describe patterns, not expose a real person's memory.
