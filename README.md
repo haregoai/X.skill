@@ -1,10 +1,10 @@
 # SignalOS
 
-`SignalOS` extends the idea behind `karpathy/llm-wiki.md` from static source compilation to X-first self-learning.
+`SignalOS` is an X-first self-learning model built on top of `karpathy/llm-wiki.md`.
 
-It is designed around a simple idea: your own information flow should not stop at capture or summarization. A useful second brain should continuously turn daily inputs into reusable judgments, working memory, and durable operating rules.
+It extends Karpathy's idea from static source compilation into continuous learning from your own X `For You` timeline.
 
-In practice, the core focus is learning from your own X `For You` timeline: capturing high-signal posts, absorbing them, distilling them, and promoting the useful parts into durable memory. Reddit, reading queues, and local notes are secondary inputs around that core loop.
+The core loop is simple: capture high-signal posts, absorb them, distill them, and promote the useful parts into durable memory. Reddit, reading queues, and local notes are secondary inputs around that core loop.
 
 This repository is the public-safe framework layer of that system. It deliberately excludes private memory, account sessions, captured feeds, API keys, and machine-specific automation state.
 
