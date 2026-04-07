@@ -1,10 +1,10 @@
 # X.skill
 
-`X.skill` is a personal X-based self-learning and self-distillation system built on top of `karpathy/llm-wiki.md`.
+`X.skill` is an X-first self-learning and self-distillation system built on top of the core ideas in `karpathy/llm-wiki.md`.
 
-It extends Karpathy's idea from static source compilation into continuous learning from your own X `For You` timeline.
+It is centered on capturing signals from your personal X `For You` feed, filtering and distilling high-value content, and promoting the useful parts into durable memory.
 
-The core loop is simple: capture high-signal posts, absorb them, distill them, and promote the useful parts into durable memory. Reddit, reading queues, and local notes are secondary inputs around that core loop.
+In one line: it extends Karpathy's wiki-maintenance pattern into a personal X-based self-learning loop for memory formation.
 
 This repository is the public-safe framework layer of that system. It deliberately excludes private memory, account sessions, captured feeds, API keys, and machine-specific automation state.
 
