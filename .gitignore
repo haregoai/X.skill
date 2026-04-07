@@ -1,0 +1,34 @@
+# Local config
+config/settings.local.json
+config/*.local.json
+.local-memory/
+
+# Runtime state
+automation/*.json
+automation/*.jsonl
+automation/*.log
+automation/*.pid
+automation/*.lock
+automation/*.plist
+automation/state/
+
+# Browser and session data
+automation/chrome-*/
+automation/browser-profile/
+automation/session/
+
+# Captured data
+raw/inbox/*
+!raw/inbox/.gitkeep
+
+# Generated dashboards
+web/*.html
+web/*.json
+
+# Secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc

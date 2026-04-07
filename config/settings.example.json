@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "repo_root": "/absolute/path/to/your/repo",
+    "memory_root": "/absolute/path/to/your/private/memory",
+    "browser_profile_root": "/absolute/path/to/your/private/browser-profile"
+  },
+  "dashboard": {
+    "assistant_refresh_seconds": 60,
+    "x_refresh_seconds": 30
+  },
+  "providers": {
+    "openai_enabled": false,
+    "anthropic_enabled": false
+  },
+  "feeds": {
+    "x_enabled": false,
+    "reddit_enabled": false
+  }
+}
