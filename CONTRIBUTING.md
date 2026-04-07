@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to `FeedDistill`.
+Thanks for contributing to `X.skill`.
 
 This repository is a public framework for building local second-brain systems. Contributions should make the framework more reusable without baking in anyone's private memory, personal workflow assumptions, or account-specific automation state.
 

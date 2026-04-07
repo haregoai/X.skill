@@ -1,6 +1,6 @@
-# FeedDistill
+# X.skill
 
-`FeedDistill` is a personal X-based self-learning and memory distillation system built on top of `karpathy/llm-wiki.md`.
+`X.skill` is a personal X-based self-learning and self-distillation system built on top of `karpathy/llm-wiki.md`.
 
 It extends Karpathy's idea from static source compilation into continuous learning from your own X `For You` timeline.
 
@@ -12,13 +12,13 @@ This repository is the public-safe framework layer of that system. It deliberate
 
 This project is best understood as a personal second-brain framework for X-driven learning, not a note-taking app.
 
-It builds on the direction behind `karpathy/llm-wiki.md`: LLM systems should do more than answer questions against static notes. They should help compile repeated inputs into reusable knowledge. `FeedDistill` pushes that idea one step further by treating your X `For You` feed as an ongoing learning surface: capture signals, reflect on them, distill them, and promote the parts that matter into durable memory.
+It builds on the direction behind `karpathy/llm-wiki.md`: LLM systems should do more than answer questions against static notes. They should help compile repeated inputs into reusable knowledge. `X.skill` pushes that idea one step further by treating your X `For You` feed as an ongoing learning surface: capture signals, reflect on them, distill them, and promote the parts that matter into durable memory.
 
 ## What Makes It Different
 
 Most note systems stop at saving information. Most feed readers stop at helping you consume more.
 
-`FeedDistill` is built around a different loop:
+`X.skill` is built around a different loop:
 
 1. capture signals from your real X `For You` flow
 2. compress strong posts into intelligence pages and learning notes
@@ -159,7 +159,7 @@ That usually means:
 
 The recommended open-source pattern is:
 
-- keep `FeedDistill` as the public framework
+- keep `X.skill` as the public framework
 - keep live capture scripts and account sessions in a private local layer
 - feed sanitized exports or derived notes back into the public workflow
 
@@ -167,7 +167,7 @@ This repository intentionally demonstrates the learning system without publishin
 
 ## Who This Is For
 
-`FeedDistill` is for people who do ongoing knowledge work and want more than a note archive:
+`X.skill` is for people who do ongoing knowledge work and want more than a note archive:
 
 - builders who learn heavily from their own X `For You` timeline
 - people who want a system that absorbs strong posts into memory instead of just bookmarking them
@@ -176,7 +176,7 @@ This repository intentionally demonstrates the learning system without publishin
 
 ## X-First Learning Model
 
-`FeedDistill` is X-first in its intended design.
+`X.skill` is X-first in its intended design.
 
 The core product idea is:
 
@@ -187,7 +187,7 @@ The core product idea is:
 
 That makes it closer to a self-learning memory system than a generic feed reader or note vault.
 
-In one line: Karpathy's `LLM Wiki` compiles static sources into a maintained wiki; `FeedDistill` extends that pattern into X-driven memory formation.
+In one line: Karpathy's `LLM Wiki` compiles static sources into a maintained wiki; `X.skill` extends that pattern into X-driven memory formation.
 
 ## X Capture And Memory Flow
 
@@ -203,7 +203,7 @@ The goal is not to save more tweets. The goal is to absorb the right tweets into
 
 ## Other Inputs
 
-`FeedDistill` can also learn from other inputs such as Reddit, reading queues, or local notes, but those are secondary to the X-centered learning loop.
+`X.skill` can also learn from other inputs such as Reddit, reading queues, or local notes, but those are secondary to the X-centered learning loop.
 
 ## Public Demo
 

@@ -2,7 +2,7 @@
 
 Describe the change in a few lines.
 
-## Why This Belongs In `FeedDistill`
+## Why This Belongs In `X.skill`
 
 Explain the public framework value of the patch.
 
