@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to `llm-wiki-open`.
+Thanks for contributing to `SignalOS`.
 
 This repository is a public framework for building local second-brain systems. Contributions should make the framework more reusable without baking in anyone's private memory, personal workflow assumptions, or account-specific automation state.
 

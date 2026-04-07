@@ -1,6 +1,6 @@
-# llm-wiki-open
+# SignalOS
 
-`llm-wiki-open` is a public scaffold for building a personal second-brain system.
+`SignalOS` is a public scaffold for building a personal second-brain system.
 
 It is designed around a simple idea: incoming information should not stop at capture or summarization. A useful second brain should help turn daily inputs into reusable judgments, working memory, and durable operating rules.
 

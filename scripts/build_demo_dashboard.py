@@ -34,7 +34,7 @@ def main() -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM Wiki Open Dashboard</title>
+  <title>SignalOS Dashboard</title>
   <style>
     :root {{
       --bg: #f5f1e8;
@@ -64,7 +64,7 @@ def main() -> None:
 <body>
   <div class="shell">
     <section class="hero">
-      <h1>LLM Wiki Open</h1>
+      <h1>SignalOS</h1>
       <p>A public-safe starter dashboard for a local second-brain scaffold.</p>
       <div class="grid">
         <div class="metric"><span class="label">Last Sync</span><span class="value">{html.escape(timestamp)}</span></div>

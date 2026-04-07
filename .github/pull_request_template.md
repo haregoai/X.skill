@@ -2,7 +2,7 @@
 
 Describe the change in a few lines.
 
-## Why This Belongs In `llm-wiki-open`
+## Why This Belongs In `SignalOS`
 
 Explain the public framework value of the patch.
 
