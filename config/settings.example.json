@@ -6,7 +6,8 @@
   },
   "dashboard": {
     "assistant_refresh_seconds": 60,
-    "x_refresh_seconds": 30
+    "x_refresh_seconds": 30,
+    "reddit_refresh_seconds": 60
   },
   "providers": {
     "openai_enabled": false,
@@ -14,6 +15,12 @@
   },
   "feeds": {
     "x_enabled": false,
-    "reddit_enabled": false
+    "reddit_enabled": true
+  },
+  "reddit": {
+    "subreddit": "MachineLearning",
+    "listing": "hot",
+    "max_posts": 12,
+    "mock_input": "raw/inbox/reddit-ml-visible-posts.example.json"
   }
 }

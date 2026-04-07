@@ -8,3 +8,4 @@ Rules:
 - never embed secrets or provider keys
 - keep login/session flows optional and documented, not bundled with private state
 - treat captured data as local and private by default
+- prefer mock JSON exports for public social-feed examples

@@ -20,6 +20,7 @@ automation/session/
 # Captured data
 raw/inbox/*
 !raw/inbox/.gitkeep
+!raw/inbox/*.example.json
 
 # Generated dashboards
 web/*.html

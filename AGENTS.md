@@ -45,6 +45,7 @@ Private:
 - Keep generated local state out of Git.
 - Prefer small, composable scripts over opaque automation.
 - When adding ingestion examples, use mock data unless the source is explicitly public-safe.
+- Keep Reddit and similar social-feed examples export-driven in the public repo unless the live connector is fully sanitized.
 - Before publishing, verify that no machine-specific or personal data paths remain.
 
 ## Resume Order

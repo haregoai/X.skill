@@ -9,6 +9,12 @@ This wiki is the durable knowledge layer for the public scaffold.
 - `wiki/entities/`: tools, systems, and repositories
 - `wiki/sources/`: sanitized source examples
 
+## Included Generated Examples
+
+- `wiki/analyses/memory-state-dashboard.md`
+- `wiki/analyses/reddit-ml-intelligence.md`
+- `wiki/analyses/reddit-ml-learning-memory.md`
+
 ## Rule
 
 The public wiki should describe patterns, not expose a real person's memory.

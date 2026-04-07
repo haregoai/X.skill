@@ -59,6 +59,7 @@ templates/   reusable markdown and structure templates
 
 - a clean repo structure for a second-brain system
 - starter scripts for private local memory initialization and sync
+- a public-safe Reddit learning demo flow using mock intake data
 - a static demo dashboard generator
 - sanitized wiki docs that explain architecture and publishing boundaries
 - config templates instead of hard-coded personal paths
@@ -80,6 +81,7 @@ templates/   reusable markdown and structure templates
 ```bash
 python3 scripts/init_memory.py
 python3 scripts/memory_state_sync.py
+python3 scripts/reddit_feed_refresh.py
 python3 scripts/build_demo_dashboard.py
 ```
 
@@ -108,6 +110,20 @@ This repository is a starter framework, not a finished product. It currently inc
 - a demo dashboard build step
 
 It does not yet ship production-grade ingestion connectors or hosted infrastructure.
+
+## Reddit Learning Flow
+
+`SignalOS` now includes a public-safe Reddit learning example.
+
+The included script:
+
+- reads a mock or local JSON export of visible Reddit posts
+- scores and filters posts for AI-relevant signal
+- writes an intelligence page and a compressed learning-memory page
+- promotes a small number of reusable rules into volatile memory
+- exposes the result in the local dashboard
+
+The default input file is [`raw/inbox/reddit-ml-visible-posts.example.json`](raw/inbox/reddit-ml-visible-posts.example.json). Forks can replace it with a private local export through `config/settings.local.json`.
 
 ## Documentation Map
 

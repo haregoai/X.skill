@@ -5,6 +5,7 @@
 - improve the starter onboarding flow
 - add one mock ingestion workflow end to end
 - expand the demo dashboard to show more memory-layer state
+- add one live-connector adapter pattern that can be configured without bundling sessions
 - add lightweight tests for config and memory sync behavior
 
 ## Mid Term

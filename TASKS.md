@@ -6,6 +6,7 @@
 - add generic scripts and examples without hard-coded personal paths
 - document how to keep a private memory layer separate from the public framework
 - add contribution, roadmap, and security guidance
+- keep social-feed examples runnable with mock inputs
 
 ## Backlog
 

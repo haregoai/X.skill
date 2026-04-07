@@ -1,0 +1,28 @@
+[
+  {
+    "title": "[D] How are people using local coding agents in research workflows?",
+    "text": "Discussion around using local coding agents, retrieval, and markdown memory to support research workflows without depending on a hosted SaaS stack.",
+    "link": "https://www.reddit.com/r/MachineLearning/comments/example1/local_coding_agents_research_workflows/",
+    "hrefs": [
+      "https://www.reddit.com/r/MachineLearning/comments/example1/local_coding_agents_research_workflows/",
+      "https://github.com/example/local-agent-memory"
+    ]
+  },
+  {
+    "title": "[P] Open source benchmark for agent memory retention",
+    "text": "A project post sharing an open source benchmark for long-horizon agent memory retention, reflection loops, and judgment transfer between sessions.",
+    "link": "https://www.reddit.com/r/MachineLearning/comments/example2/open_source_benchmark_agent_memory_retention/",
+    "hrefs": [
+      "https://www.reddit.com/r/MachineLearning/comments/example2/open_source_benchmark_agent_memory_retention/",
+      "https://github.com/example/agent-memory-benchmark"
+    ]
+  },
+  {
+    "title": "[R] What actually survives from AI reading into durable knowledge?",
+    "text": "Researchers discuss why most AI reading pipelines stop at summarization, and how memory promotion rules can help turn repeated signals into durable operating knowledge.",
+    "link": "https://www.reddit.com/r/MachineLearning/comments/example3/durable_ai_reading_knowledge/",
+    "hrefs": [
+      "https://www.reddit.com/r/MachineLearning/comments/example3/durable_ai_reading_knowledge/"
+    ]
+  }
+]
