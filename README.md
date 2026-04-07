@@ -66,17 +66,26 @@ templates/   reusable markdown and structure templates
 ## Quick Start
 
 ```bash
+./setup.sh
+```
+
+or run the scripts directly:
+
+```bash
 python3 scripts/init_memory.py
 python3 scripts/memory_state_sync.py
+python3 scripts/x_home_feed_refresh.py
 python3 scripts/reddit_feed_refresh.py
 python3 scripts/build_demo_dashboard.py
 ```
 
-This runs the public-safe demo flow. It initializes local memory, generates learning pages from mock social-feed input, and builds a local dashboard.
+This runs the public-safe demo flow. It initializes local memory, generates learning pages from mock X home and social-feed input, and builds a local dashboard.
 
 If you want external paths, copy [`config/settings.example.json`](config/settings.example.json) to `config/settings.local.json` and replace the example values with your own local directories. If you skip local config, the scripts default to a private `.local-memory/` folder inside the repo.
 
 The public repo does not ship real X sessions, browser profiles, or live capture scripts. Real X capture belongs in a private local runtime layer.
+
+For a step-by-step path, read [`GETTING_STARTED.md`](GETTING_STARTED.md).
 
 ## Who This Is For
 
@@ -116,7 +125,7 @@ The goal is not to save more tweets. The goal is to absorb the right tweets into
 
 ## X Dashboard
 
-[`x-dashboard.html`](/Users/dengz/llm-wiki/web/x-dashboard.html) is the live learning dashboard for the personal X home feed.
+In the private runtime, `x-dashboard.html` is the live learning dashboard for the personal X home feed.
 
 It sits between raw X input and durable memory, and shows:
 
@@ -145,13 +154,30 @@ The dedicated browser exists for one reason: keep your personal X login and auto
 
 For a fuller private-setup walkthrough, see [`wiki/analyses/x-private-capture-setup.md`](wiki/analyses/x-private-capture-setup.md).
 
+If you already have a local JSON export of visible X home posts, you can run:
+
+```bash
+./scripts/run_x_pipeline.sh /absolute/path/to/x-home-visible-posts.json
+```
+
+That command processes your local export into intelligence pages, learning-memory pages, and an updated dashboard.
+
 ## Public Demo
 
 The public demo uses mock social-feed input because it is safe to publish. In a real private setup, the same learning loop is intended to run primarily on your own X home capture stream.
 
+## Examples
+
+See [`examples/`](examples/) for public-safe before/after examples of:
+
+- raw X home input
+- intelligence output
+- distilled memory output
+
 ## Documentation Map
 
 - [`AGENTS.md`](AGENTS.md): operating rules for agent maintenance
+- [`GETTING_STARTED.md`](GETTING_STARTED.md): fastest way to run the demo and process a local X export
 - [`wiki/overview.md`](wiki/overview.md): wiki structure
 - [`wiki/analyses/x-private-capture-setup.md`](wiki/analyses/x-private-capture-setup.md): how to run X capture with a private browser layer
 - [`wiki/analyses/memory-schema.md`](wiki/analyses/memory-schema.md): memory layer design

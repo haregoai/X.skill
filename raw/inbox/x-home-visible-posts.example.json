@@ -1,0 +1,31 @@
+[
+  {
+    "author": "Haoshan Hong",
+    "handle": "@haoshanhong",
+    "text": "This is the most practical way ordinary people can use Obsidian with AI. The point is not to collect notes, but to support thinking, writing, and work.",
+    "link": "https://x.com/haoshanhong/status/example1",
+    "hrefs": [
+      "https://x.com/haoshanhong/status/example1",
+      "https://github.com/example/obsidian-template"
+    ]
+  },
+  {
+    "author": "Karpathy",
+    "handle": "@karpathy",
+    "text": "A maintained wiki is more useful than re-answering from raw notes every time. You want knowledge compilation, not just retrieval.",
+    "link": "https://x.com/karpathy/status/example2",
+    "hrefs": [
+      "https://x.com/karpathy/status/example2",
+      "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    ]
+  },
+  {
+    "author": "Open Source Builder",
+    "handle": "@osbuilder",
+    "text": "Local agent workflows get much more useful when reflection and memory promotion happen automatically after reading a feed.",
+    "link": "https://x.com/osbuilder/status/example3",
+    "hrefs": [
+      "https://x.com/osbuilder/status/example3"
+    ]
+  }
+]

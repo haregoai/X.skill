@@ -77,7 +77,7 @@ The clean boundary between private capture and public learning is a local JSON e
 For example:
 
 - private runtime captures visible X posts
-- private runtime writes `raw/inbox/x-for-you-visible-posts.json`
+- private runtime writes `raw/inbox/x-home-visible-posts.json`
 - `X.skill` reads the file and produces intelligence pages, reflection pages, and memory updates
 
 This handoff keeps the public repository reusable without bundling anyone's private account state.

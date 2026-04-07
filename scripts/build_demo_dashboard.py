@@ -11,9 +11,12 @@ from config import repo_root
 
 ROOT = repo_root()
 STATE = ROOT / "automation" / "memory-state.json"
+X_STATE = ROOT / "automation" / "x-home-state.json"
 REDDIT_STATE = ROOT / "automation" / "reddit-state.json"
 OUTPUT = ROOT / "web" / "assistant-dashboard.html"
 MEMORY_PAGE = ROOT / "wiki" / "analyses" / "memory-state-dashboard.md"
+X_INTELLIGENCE = ROOT / "wiki" / "analyses" / "x-home-intelligence.md"
+X_LEARNING = ROOT / "wiki" / "analyses" / "x-home-learning-memory.md"
 REDDIT_INTELLIGENCE = ROOT / "wiki" / "analyses" / "reddit-ml-intelligence.md"
 REDDIT_LEARNING = ROOT / "wiki" / "analyses" / "reddit-ml-learning-memory.md"
 
@@ -32,6 +35,13 @@ def main() -> None:
     volatile = str(state.get("volatile_priorities", 0))
     duplicate = str(state.get("volatile_duplicate_bullets", 0))
     page_ref = MEMORY_PAGE.relative_to(ROOT).as_posix()
+    x_data = load_json(X_STATE, {})
+    x_visible = str(x_data.get("visible_posts", 0))
+    x_ai = str(x_data.get("ai_posts", 0))
+    x_source_mode = str(x_data.get("source_mode", "disabled"))
+    x_status = str(x_data.get("content_status", "not_built"))
+    x_page_ref = X_INTELLIGENCE.relative_to(ROOT).as_posix()
+    x_learning_ref = X_LEARNING.relative_to(ROOT).as_posix()
     reddit = load_json(REDDIT_STATE, {})
     reddit_visible = str(reddit.get("visible_posts", 0))
     reddit_ai = str(reddit.get("ai_posts", 0))
@@ -93,7 +103,26 @@ def main() -> None:
       <p class="small">Detailed state page: <code>{html.escape(page_ref)}</code></p>
     </section>
     <section class="panel row">
-      <h2>Reddit Learning</h2>
+      <h2>X Home Learning</h2>
+      <div class="grid">
+        <div class="metric"><span class="label">Visible Posts</span><span class="value">{html.escape(x_visible)}</span></div>
+        <div class="metric"><span class="label">AI-Relevant</span><span class="value">{html.escape(x_ai)}</span></div>
+        <div class="metric"><span class="label">Source Mode</span><span class="value">{html.escape(x_source_mode)}</span></div>
+        <div class="metric"><span class="label">Status</span><span class="value">{html.escape(x_status)}</span></div>
+      </div>
+      <div class="link-grid">
+        <div class="link-card">
+          <span class="label">Intelligence Page</span>
+          <code>{html.escape(x_page_ref)}</code>
+        </div>
+        <div class="link-card">
+          <span class="label">Learning Memory</span>
+          <code>{html.escape(x_learning_ref)}</code>
+        </div>
+      </div>
+    </section>
+    <section class="panel row">
+      <h2>Reddit Learning Demo</h2>
       <div class="grid">
         <div class="metric"><span class="label">Visible Posts</span><span class="value">{html.escape(reddit_visible)}</span></div>
         <div class="metric"><span class="label">AI-Relevant</span><span class="value">{html.escape(reddit_ai)}</span></div>
