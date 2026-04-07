@@ -10,9 +10,7 @@ This repository is the public-safe framework layer of that system. It deliberate
 
 ## Positioning
 
-This project is best understood as a personal second-brain framework for X-driven learning, not a note-taking app.
-
-It builds on the direction behind `karpathy/llm-wiki.md`: LLM systems should do more than answer questions against static notes. They should help compile repeated inputs into reusable knowledge. `X.skill` pushes that idea one step further by treating your X `For You` feed as an ongoing learning surface: capture signals, reflect on them, distill them, and promote the parts that matter into durable memory.
+This project is best understood as a personal second-brain framework for X-driven learning, not a note-taking app or a generic feed reader.
 
 ## What Makes It Different
 
@@ -27,27 +25,6 @@ Most note systems stop at saving information. Most feed readers stop at helping 
 5. reuse that memory in future work
 
 The point is not to build a larger archive. The point is to build a system that learns from your feed and remembers what matters.
-
-## What This Repository Contains
-
-This repository contains the public framework for that system. It separates:
-
-- intake from synthesis
-- durable memory from temporary runtime state
-- public framework code from private personal data
-- markdown knowledge from generated dashboards
-
-It is meant to be forked and adapted to an individual's workflow, not used as a hosted product.
-
-## Current Public Demo
-
-The public repo currently demonstrates three things:
-
-- layered markdown memory
-- learning from a social-feed style input into intelligence and memory pages
-- local dashboard generation from sanitized state
-
-That is enough to show the operating model without publishing a real person's memory or browser session.
 
 ## Architecture
 
@@ -72,10 +49,10 @@ templates/   reusable markdown and structure templates
 ## Included
 
 - a clean repo structure for a second-brain system
-- starter scripts for private local memory initialization and sync
+- starter scripts for local memory initialization and sync
 - a public-safe learning demo flow using mock intake data
-- a static demo dashboard generator
-- sanitized wiki docs that explain architecture and publishing boundaries
+- a static dashboard generator
+- docs for private X capture and dedicated-browser setup
 - config templates instead of hard-coded personal paths
 
 ## Not Included
@@ -88,10 +65,6 @@ templates/   reusable markdown and structure templates
 
 ## Quick Start
 
-1. Copy [`config/settings.example.json`](config/settings.example.json) to `config/settings.local.json`.
-2. Replace the example values with your own local paths if you want an external memory directory.
-3. Run the starter scripts:
-
 ```bash
 python3 scripts/init_memory.py
 python3 scripts/memory_state_sync.py
@@ -99,71 +72,11 @@ python3 scripts/reddit_feed_refresh.py
 python3 scripts/build_demo_dashboard.py
 ```
 
-4. Open the generated dashboard at `web/assistant-dashboard.html`.
-5. Read [`AGENTS.md`](AGENTS.md) and [`wiki/overview.md`](wiki/overview.md) before extending the repo.
+This runs the public-safe demo flow. It initializes local memory, generates learning pages from mock social-feed input, and builds a local dashboard.
 
-If you skip local config, the scripts default to a private `.local-memory/` folder inside the repo.
+If you want external paths, copy [`config/settings.example.json`](config/settings.example.json) to `config/settings.local.json` and replace the example values with your own local directories. If you skip local config, the scripts default to a private `.local-memory/` folder inside the repo.
 
-## What Works Out Of The Box
-
-This repository runs successfully as a public-safe demo.
-
-Out of the box, a fresh clone can:
-
-- initialize local memory files
-- generate a memory-state dashboard
-- run the social-feed learning demo from mock JSON input
-- generate intelligence and learning-memory markdown pages
-
-Out of the box, a fresh clone does not:
-
-- log into X, Reddit, or any browser session
-- capture live social feeds automatically
-- ship cookies, browser profiles, or account state
-
-This split is intentional. The public repo shows the learning architecture. The private layer is where a real user's live capture runs.
-
-## How To Use It
-
-Use this repo as the public framework layer, then keep your real second brain in one of these patterns:
-
-- a private sibling repository
-- a private local directory outside Git
-- ignored local files referenced through `config/settings.local.json`
-
-The safe rule is simple: publish structure, prompts, templates, and generic scripts. Do not publish your actual memory.
-
-## Project Status
-
-This repository is a starter framework, not a finished product. It currently includes:
-
-- a layered memory model
-- local memory initialization
-- memory-state sync
-- a public-safe social-feed learning demo flow
-- a demo dashboard build step
-
-It does not yet ship production-grade ingestion connectors or hosted infrastructure.
-
-## If You Want Real Capture
-
-If someone wants to capture real Reddit, X, or other feeds instead of using the included mock demo, they need to add their own private runtime layer.
-
-That usually means:
-
-1. create `config/settings.local.json`
-2. point it at a private local memory directory outside Git
-3. prepare a private browser or export workflow
-4. supply local input data such as JSON exports or a custom connector
-5. keep sessions, cookies, browser profiles, and logs out of the public repository
-
-The recommended open-source pattern is:
-
-- keep `X.skill` as the public framework
-- keep live capture scripts and account sessions in a private local layer
-- feed sanitized exports or derived notes back into the public workflow
-
-This repository intentionally demonstrates the learning system without publishing anyone's personal browsing state.
+The public repo does not ship real X sessions, browser profiles, or live capture scripts. Real X capture belongs in a private local runtime layer.
 
 ## Who This Is For
 
@@ -201,6 +114,21 @@ In a real private setup, the X loop looks like this:
 
 The goal is not to save more tweets. The goal is to absorb the right tweets into your brain.
 
+## X Dashboard
+
+[`x-dashboard.html`](/Users/dengz/llm-wiki/web/x-dashboard.html) is the live learning dashboard for the personal X `For You` feed.
+
+It sits between raw X input and durable memory, and shows:
+
+- capture health and read status
+- feed composition and topic density
+- high-value learning candidates
+- GitHub follow-up signals
+- reflection notes and current conclusions
+- a bilingual timeline of absorbed posts
+
+It is not a normal feed reader. It is the learning surface where X posts are turned into memory candidates.
+
 ## How To Use X Capture
 
 The public repository does not ship your real X session or private browser automation. Instead, the intended setup is:
@@ -217,21 +145,9 @@ The dedicated browser exists for one reason: keep your personal X login and auto
 
 For a fuller private-setup walkthrough, see [`wiki/analyses/x-private-capture-setup.md`](wiki/analyses/x-private-capture-setup.md).
 
-## Other Inputs
-
-`X.skill` can also learn from other inputs such as Reddit, reading queues, or local notes, but those are secondary to the X-centered learning loop.
-
 ## Public Demo
 
-The included script:
-
-- reads a mock or local JSON export of visible social-feed posts
-- scores and filters posts for AI-relevant signal
-- writes an intelligence page and a compressed learning-memory page
-- promotes a small number of reusable rules into volatile memory
-- exposes the result in the local dashboard
-
-The current public demo uses [`raw/inbox/reddit-ml-visible-posts.example.json`](raw/inbox/reddit-ml-visible-posts.example.json) because it is safe to publish. In a real private setup, that same learning loop is intended to run primarily on your own X `For You` capture stream.
+The public demo uses mock social-feed input because it is safe to publish. In a real private setup, the same learning loop is intended to run primarily on your own X `For You` capture stream.
 
 ## Documentation Map
 
