@@ -1,22 +1,36 @@
 # SignalOS
 
-`SignalOS` is a public scaffold for building a personal second-brain system.
+`SignalOS` extends the idea behind `karpathy/llm-wiki.md` from static source compilation to X-first self-learning.
 
-It is designed around a simple idea: incoming information should not stop at capture or summarization. A useful second brain should help turn daily inputs into reusable judgments, working memory, and durable operating rules.
+It is designed around a simple idea: your own information flow should not stop at capture or summarization. A useful second brain should continuously turn daily inputs into reusable judgments, working memory, and durable operating rules.
 
-This repository is the public-safe framework layer. It deliberately excludes private memory, account sessions, captured feeds, API keys, and machine-specific automation state.
+In practice, the core focus is learning from your own X `For You` timeline: capturing high-signal posts, absorbing them, distilling them, and promoting the useful parts into durable memory. Reddit, reading queues, and local notes are secondary inputs around that core loop.
 
-> A self-learning second brain built on the ideas behind `karpathy/llm-wiki.md`, designed to turn information flow into durable memory.
+This repository is the public-safe framework layer of that system. It deliberately excludes private memory, account sessions, captured feeds, API keys, and machine-specific automation state.
 
 ## Positioning
 
-This project is best understood as a personal second-brain operating system, not a note-taking app.
+This project is best understood as a personal second-brain operating system for X-driven learning, not a note-taking app.
 
-It builds on the direction behind `karpathy/llm-wiki.md`: LLM systems should do more than answer questions against static notes. They should help compile repeated inputs into reusable knowledge. `SignalOS` pushes that idea toward a practical local workflow: capture information, reflect on it, distill it, and promote the parts that matter into durable memory.
+It builds on the direction behind `karpathy/llm-wiki.md`: LLM systems should do more than answer questions against static notes. They should help compile repeated inputs into reusable knowledge. `SignalOS` pushes that idea one step further by treating your X `For You` feed as an ongoing learning surface: capture signals, reflect on them, distill them, and promote the parts that matter into durable memory.
 
-## What This Project Is
+## What Makes It Different
 
-This project is a file-based operating system for knowledge work. It separates:
+Most note systems stop at saving information. Most feed readers stop at helping you consume more.
+
+`SignalOS` is built around a different loop:
+
+1. capture signals from your real X `For You` flow
+2. compress strong posts into intelligence pages and learning notes
+3. extract durable rules from repeated high-signal inputs
+4. promote those rules into memory
+5. reuse that memory in future work
+
+The point is not to build a larger archive. The point is to build a system that learns from your feed and remembers what matters.
+
+## What This Repository Contains
+
+This repository contains the public framework for that system. It separates:
 
 - intake from synthesis
 - durable memory from temporary runtime state
@@ -25,17 +39,15 @@ This project is a file-based operating system for knowledge work. It separates:
 
 It is meant to be forked and adapted to an individual's workflow, not used as a hosted product.
 
-## Core Idea
+## Current Public Demo
 
-The model behind this repo is:
+The public repo currently demonstrates three things:
 
-1. capture external inputs
-2. distill them into notes, analyses, and decisions
-3. promote stable patterns into durable memory
-4. expose the current state through a local dashboard
-5. let agents write back into the system in a controlled way
+- layered markdown memory
+- learning from a social-feed style input into intelligence and memory pages
+- local dashboard generation from sanitized state
 
-The goal is not to build a larger archive. The goal is to build a system that can reuse what it has already learned.
+That is enough to show the operating model without publishing a real person's memory or browser session.
 
 ## Architecture
 
@@ -61,7 +73,7 @@ templates/   reusable markdown and structure templates
 
 - a clean repo structure for a second-brain system
 - starter scripts for private local memory initialization and sync
-- a public-safe Reddit learning demo flow using mock intake data
+- a public-safe learning demo flow using mock intake data
 - a static demo dashboard generator
 - sanitized wiki docs that explain architecture and publishing boundaries
 - config templates instead of hard-coded personal paths
@@ -100,7 +112,7 @@ Out of the box, a fresh clone can:
 
 - initialize local memory files
 - generate a memory-state dashboard
-- run the Reddit learning demo from mock JSON input
+- run the social-feed learning demo from mock JSON input
 - generate intelligence and learning-memory markdown pages
 
 Out of the box, a fresh clone does not:
@@ -108,6 +120,8 @@ Out of the box, a fresh clone does not:
 - log into X, Reddit, or any browser session
 - capture live social feeds automatically
 - ship cookies, browser profiles, or account state
+
+This split is intentional. The public repo shows the learning architecture. The private layer is where a real user's live capture runs.
 
 ## How To Use It
 
@@ -126,7 +140,7 @@ This repository is a starter framework, not a finished product. It currently inc
 - a layered memory model
 - local memory initialization
 - memory-state sync
-- a public-safe Reddit learning demo flow
+- a public-safe social-feed learning demo flow
 - a demo dashboard build step
 
 It does not yet ship production-grade ingestion connectors or hosted infrastructure.
@@ -151,19 +165,57 @@ The recommended open-source pattern is:
 
 This repository intentionally demonstrates the learning system without publishing anyone's personal browsing state.
 
-## Reddit Learning Flow
+## Who This Is For
 
-`SignalOS` now includes a public-safe Reddit learning example.
+`SignalOS` is for people who do ongoing knowledge work and want more than a note archive:
+
+- builders who learn heavily from their own X `For You` timeline
+- people who want a system that absorbs strong posts into memory instead of just bookmarking them
+- people who want memory to affect later decisions, not just store old text
+- users who prefer local files, markdown, and inspectable workflows over opaque hosted systems
+
+## X-First Learning Model
+
+`SignalOS` is X-first in its intended design.
+
+The core product idea is:
+
+- observe your own X `For You` feed
+- identify the posts that are actually worth keeping
+- compress them into reflections, rules, and learning memory
+- move the durable parts into your second brain
+
+That makes it closer to a self-learning memory system than a generic feed reader or note vault.
+
+In one line: Karpathy's `LLM Wiki` compiles static sources into a maintained wiki; `SignalOS` extends that pattern into X-driven memory formation.
+
+## X Capture And Memory Flow
+
+In a real private setup, the X loop looks like this:
+
+1. read your own X `For You` feed
+2. identify the posts worth keeping
+3. write intelligence, reflection, and learning-memory pages
+4. promote durable judgments into memory
+5. surface the current state in a local dashboard
+
+The goal is not to save more tweets. The goal is to absorb the right tweets into your brain.
+
+## Other Inputs
+
+`SignalOS` can also learn from other inputs such as Reddit, reading queues, or local notes, but those are secondary to the X-centered learning loop.
+
+## Public Demo
 
 The included script:
 
-- reads a mock or local JSON export of visible Reddit posts
+- reads a mock or local JSON export of visible social-feed posts
 - scores and filters posts for AI-relevant signal
 - writes an intelligence page and a compressed learning-memory page
 - promotes a small number of reusable rules into volatile memory
 - exposes the result in the local dashboard
 
-The default input file is [`raw/inbox/reddit-ml-visible-posts.example.json`](raw/inbox/reddit-ml-visible-posts.example.json). Forks can replace it with a private local export through `config/settings.local.json`.
+The current public demo uses [`raw/inbox/reddit-ml-visible-posts.example.json`](raw/inbox/reddit-ml-visible-posts.example.json) because it is safe to publish. In a real private setup, that same learning loop is intended to run primarily on your own X `For You` capture stream.
 
 ## Documentation Map
 
