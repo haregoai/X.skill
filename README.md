@@ -194,3 +194,7 @@ Contributions should improve the framework without introducing private user data
 ## License
 
 Released under the MIT License. See [`LICENSE`](LICENSE).
+
+
+<img width="2850" height="1256" alt="image" src="https://github.com/user-attachments/assets/2d2d6eda-7a56-4ffd-ae40-200c92d1702e" />
+<img width="2652" height="1520" alt="image" src="https://github.com/user-attachments/assets/597232c3-dd46-49a7-a890-1164c4fb5f31" />
